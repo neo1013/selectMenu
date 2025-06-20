@@ -1,0 +1,93 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f6f8fa;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+label {
+  font-size: 0.9rem;
+  margin-right: 12px;
+}
+
+input[type="checkbox"] {
+  margin-right: 4px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* 篩選區塊 */
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filter-panel input,
+.filter-panel select {
+  max-width: 250px;
+}
+
+/* 桌面表格列樣式 */
+.product-table-header,
+.product-table-row {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 2fr;
+  padding: 8px;
+}
+
+.product-table-header {
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+  background-color: #f0f0f0;
+}
+
+.product-table-row {
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.product-table-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* 手機卡片 */
+.product-card {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+}
+
+.product-card h2 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.product-card p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+}
+
+/* RWD 手機卡片排版 */
+@media (max-width: 768px) {
+  .mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+}
